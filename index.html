@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Sartaj Khan</title>
+<link rel="icon" type="x-icon" href="myfavicon.ico">
 <style>
   body {
     font-family: 'Times New Roman';
@@ -17,13 +18,13 @@
   table {
     border-collapse: collapse;
     width: 100%;
-    background-color: #000; /* Black */
+    background-color: #0b0c0c; /* Black */
   }
 
   td {
-    border: 1px solid #000;
+    border: 1px solid #fcf803;
     padding: 5px;
-    color: #FFF; /* White */
+    color: #f50606; /* White */
   }
 
   .header {
@@ -36,7 +37,7 @@
     font-size: 20pt;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #008080; /* Dark Teal */
+    color: #ff0000; /* Dark Teal */
   }
 
   .section-subtitle {
@@ -78,18 +79,36 @@
     color: #4B0082; /* Indigo */
   }
 
-  ul {
-
-    display: block;
-  list-style-type: disc;
-  margin-top: 1em;
-  margin-bottom: 1 em;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 50px;
-  /* background-color: #c75555; */
+  .section-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
+  .section {
+    width: 48%; /* Adjust the width as needed */
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  /* Background colors for each div */
+  .section-title {
+    background-color: #FFD700; /* Gold */
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .table {
+    background-color: #E6E6FA; /* Lavender */
+    padding: 10px;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 20px;
+  }
 </style>
 </head>
 <body>
@@ -104,12 +123,23 @@
   Career Goal
 </div>
 <div class="section-subtitle">
-  To work in an environment where I get a chance to gain knowledge which can be shared and enriched, where I can utilize my skills and expertise to the optimum towards achieving my goal.
+  To work in an environment where I get a chance to gain knowledge which can be shared and enriched, <br>where I can utilize my skills and expertise to the optimum towards achieving my goal.
 </div>
 <div class="section-title">
-  Academic Qualification
+   Profile
+  </div>
+  <div class="section-subtitle">
+   • A detail oriented, hard working professional with exceptional programming skills possesses Master in computer application degree in Computer.<br>
+   • Skilled in programming languages and using them for software developing.<br>
+   • Proficient in maintaining the existing program with implementation of new techniques.<br>
+   • skilled in leading the team from the front.<br>
+   • Remarkable ability in executing the plan with precision. </div>
+
+<div class="section-title"  onclick="toggleTable()">
+  <!-- Academic Qualification<br><i></i> For The Academic Qualification <i></i><br> -->
+ <i><a href="#">For The Academic Qualification Click Here </a></i> 
 </div>
-<table>
+<table id="career-goal-table" style="display: none;" >
   <tr>
     <td>10th</td>
     <td>SAMOV high school,<br />Kesaro, Ratu, Ranchi</td>
@@ -139,32 +169,43 @@
     <td>Loading...</td>
   </tr>
 </table>
-
-<div class="section-title">
-    Skills and Knowledge
-</div>
-<div class="table table-bordered">
-  <ul><b>*</b> C/C++/C#</ul>
-  <ul><b>*</b> Html/CSS </ul>
-  <ul><b>*</b> JavaScript(AJAX ,JSON) </ul>
-  <ul><b>*</b> JAVA</ul>
-  <ul><b>*</b> .NET</ul>
-  <ul><b>*</b> PHP</ul>
-  <ul><b>*</b> Python (Django)</ul>
-  <ul><b>*</b> SQL(MYSQL, PostgreSQL)</ul>
+<div class="header">
+    <!-- Header content remains the same -->
+  </div>
   
-</div>
+  <div class="section-container">
+    <!-- Left column -->
+    <div class="section">
+      <div class="section-title">
+        Skills and Knowledge
+      </div>
+      <div class="table table-bordered">
+        <ul><b>*</b> C/C++/C#</ul>
+        <ul><b>*</b> Html/CSS </ul>
+        <ul><b>*</b> JavaScript(AJAX ,JSON) </ul>
+        <ul><b>*</b> JAVA</ul>
+        <ul><b>*</b> .NET</ul>
+        <ul><b>*</b> PHP</ul>
+        <ul><b>*</b> Python (Django)</ul>
+        <ul><b>*</b> SQL(MYSQL, PostgreSQL)</ul>
+      </div>
+    </div>
+  
+    <!-- Right column -->
+    <div class="section">
+      <div class="section-title">
+        Soft Skills
+      </div>
+      <div class="table table-bordered">
+        <ul style="list-style-type:circle"><b>*</b> Communication</ul>  
+        <ul><b>*</b> Team Work</ul> 
+        <ul><b>*</b> Time Management</ul> 
+        <ul><b>*</b> Creative</ul> 
+        <ul><b>*</b> Leadership</ul> 
+      </div>
+    </div>
+  </div>
 
-<div class="section-title">
-    Soft Skills
-  </div>
-  <div class="table table-bordered">
-    <ul style="list-style-type:circle"><b>*</b> Communication</ul>  
-    <ul><b>*</b> Team Work</ul> 
-    <ul><b>*</b> Time Management</ul> 
-    <ul><b>*</b> Creative</ul> 
-    <ul><b>*</b> Leadership</ul> 
-  </div>
 
   <div class="section-title">
     Projects
@@ -208,5 +249,15 @@
   Category: General<br />
   Marital Status: Unmarried</b>
 </div>
+<script>
+    function toggleTable() {
+      var table = document.getElementById("career-goal-table");
+      if (table.style.display === "none") {
+        table.style.display = "table"; // Show the table as a table element
+      } else {
+        table.style.display = "none"; // Hide the table
+      }
+    }
+    </script>
 </body>
 </html>
